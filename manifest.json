@@ -10,7 +10,7 @@
     "display_override": ["standalone"],
     "icons": [
         {
-            "src": "./images/pacman.jpg",
+            "src": "./pacman.jpg",
             "type": "image/jpeg",
             "sizes": "700x700"
         }   
