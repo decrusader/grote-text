@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+</head>
+<style>
+    body{
+        margin: auto;
+        padding: 0;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%
+        /* Set a height for the container */
+    }
+</style>
+
+<body>
+
+    <div class="flex-container">
+        <p style="font-size:20vw;" id="text"></p>
+    </div>
+</body>
+
+<script>
+    function main() {
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+
+        let waarde = urlParams.get('text');
+
+        console.log(waarde);
+
+        document.querySelector("#text").innerHTML = waarde;
+    }
+
+    window.onload = main;
+</script>
+
+</html>
