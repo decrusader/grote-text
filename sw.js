@@ -3,7 +3,7 @@ const dynamicCacheName = 'site-dynamic-v1'
 const assets = [
   './',
   './index.html',
-  './images/',
+  './',
   './images/pacman.jpg',
 ]
  
