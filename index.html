@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
+
+    <link rel="manifest" href=".manifest.json">
 </head>
 <body>
     <form action="./show.html" method="get">
@@ -13,6 +16,17 @@
     </form>
 
     <p class="centered-text">This paragraph will be center-aligned.</p>
-
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(registration => {
+                    console.log('Excellent, registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Service worker registration failed:', error);
+                });
+        }
+    </script>
 </body>
 </html>
